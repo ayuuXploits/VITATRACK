@@ -1,4 +1,5 @@
 # VitaTrack 
+![Main Header](./docs/vitatrack.png)
 | | |
 |---|---|
 | ![Dashboard](./docs/vitatrack1.png) | ![Targets](./docs/vitatrack2.png) |
