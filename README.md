@@ -84,7 +84,7 @@ vitatrack/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ayuuXploits/VITATRACK.git
 cd vitatrack
 ```
 
@@ -176,4 +176,12 @@ POST /api/vitatrack/ai-coach
 
 ## License
 
-MIT
+Copyright (c) 2026 Ayush Kumar (ayuuXploits). All rights reserved.
+
+This software and associated documentation files (the "Software") are 
+proprietary to Ayush Kumar. 
+
+No part of this Software may be copied, modified, merged, published, 
+distributed, sublicensed, or sold without the express written permission 
+of the owner.
+
