@@ -1,4 +1,8 @@
-# VitaTrack v2
+# VitaTrack 
+| | |
+|---|---|
+| ![Dashboard](./docs/vitatrack1.png) | ![Targets](./docs/vitatrack2.png) |
+| ![Activity](./docs/vitatrack3.png) | ![Workouts](./docs/vitatrack4.png) |
 
 Smart nutrition & personalized fitness tracker — a full-stack web application for managing your health goals.
 
