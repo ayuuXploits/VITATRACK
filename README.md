@@ -7,7 +7,7 @@
 
 Smart nutrition & personalized fitness tracker — a full-stack web application for managing your health goals.
 
-## Features
+## Features 
 
 - **Personalized Calorie & Macro Targets** — calculated from your age, weight, height, and activity level using the Mifflin-St Jeor formula
 - **6 Fitness Goals** — Lose Weight, Gain Weight, Stay Healthy — with gym, home, and no-workout plans
