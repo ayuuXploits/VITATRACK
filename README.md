@@ -36,8 +36,8 @@ Smart nutrition & personalized fitness tracker — a full-stack web application 
 | Charts | Recharts + Chart.js |
 | Backend | Node.js 24, Express 5 |
 | AI | Anthropic Claude (via Replit AI Integrations) |
-| Validation | Zod v4, Drizzle-Zod |
-| API Contract | OpenAPI 3.1 + Orval codegen |
+| Validation   | Zod v4, Drizzle-Zod |
+| API Contract  | OpenAPI 3.1 + Orval codegen |
 | Database | PostgreSQL + Drizzle ORM |
 | Package Manager | pnpm workspaces |
 | Build | esbuild (server), Vite (client) |
