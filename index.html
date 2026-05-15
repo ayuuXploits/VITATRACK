@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a0a0f">
+<title>VitaTrack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="frontend/css/style.css">
+</head>
+<body>
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="logo">VitaTrack</div>
+    <p class="tagline">Smart nutrition & fitness tracking</p>
+  </header>
+
+  <!-- Goal Selection -->
+  <div class="sel-section">
+    <div class="section-label">Your Goal</div>
+    <div class="sel-cards" id="goalCards">
+      <div class="sel-card" data-goal="gain" onclick="app.selGoal('gain')">
+        <span class="ci">&#x25B2;</span>
+        <div class="cn">Gain Weight</div>
+        <div class="cd">Build muscle with surplus</div>
+      </div>
+      <div class="sel-card active" data-goal="lose" onclick="app.selGoal('lose')">
+        <span class="ci">&#x25BC;</span>
+        <div class="cn">Lose Weight</div>
+        <div class="cd">Burn fat with deficit</div>
+      </div>
+      <div class="sel-card" data-goal="maintain" onclick="app.selGoal('maintain')">
+        <span class="ci">&#x25C6;</span>
+        <div class="cn">Stay Healthy</div>
+        <div class="cd">Maintain & optimize</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workout Type -->
+  <div class="sel-section">
+    <div class="section-label">Workout Environment</div>
+    <div class="sel-cards" id="workCards">
+      <div class="sel-card active" data-work="gym" onclick="app.selWork('gym')">
+        <span class="ci">&#x25C8;</span>
+        <div class="cn">Gym</div>
+        <div class="cd">Full equipment</div>
+      </div>
+      <div class="sel-card" data-work="home" onclick="app.selWork('home')">
+        <span class="ci">&#x2302;</span>
+        <div class="cn">Home</div>
+        <div class="cd">Bodyweight & minimal</div>
+      </div>
+      <div class="sel-card" data-work="none" onclick="app.selWork('none')">
+        <span class="ci">&#x25CE;</span>
+        <div class="cn">No Workout</div>
+        <div class="cd">Diet-only plan</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Form -->
+  <div class="form-grid">
+    <div class="field"><label>Age</label><input type="number" id="age" placeholder="25" min="10" max="100" inputmode="numeric"></div>
+    <div class="field"><label>Gender</label><select id="gender"><option value="male">Male</option><option value="female">Female</option></select></div>
+    <div class="field"><label>Weight (kg)</label><input type="number" id="weight" placeholder="70" min="20" max="300" step="0.1" inputmode="decimal"></div>
+    <div class="field"><label>Height (cm)</label><input type="number" id="height" placeholder="175" min="100" max="250" inputmode="numeric"></div>
+    <div class="field" style="grid-column:1/-1"><label>Activity Level</label>
+      <select id="activity">
+        <option value="1.2">Sedentary</option>
+        <option value="1.375">Lightly Active</option>
+        <option value="1.55" selected>Moderately Active</option>
+        <option value="1.725">Very Active</option>
+        <option value="1.9">Super Active</option>
+      </select>
+    </div>
+    <button class="btn-calc" onclick="app.calculate()">Generate My Plan</button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results">
+    <div class="results-header"><span id="rIcon">*</span><span id="rTitle">Your Plan</span></div>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="app.switchTab('overview')">Overview</button>
+      <button class="tab-btn" onclick="app.switchTab('workout')">Workout</button>
+      <button class="tab-btn" onclick="app.switchTab('nutrition')">Nutrition</button>
+      <button class="tab-btn" onclick="app.switchTab('tracking')">Tracking</button>
+      <button class="tab-btn" onclick="app.switchTab('wellness')">Wellness</button>
+      <button class="tab-btn" onclick="app.switchTab('ai')">AI Coach</button>
+    </div>
+
+    <!-- Tab Panes -->
+    <div class="tab-pane active" id="tab-overview"></div>
+    <div class="tab-pane" id="tab-workout"></div>
+    <div class="tab-pane" id="tab-nutrition"></div>
+    <div class="tab-pane" id="tab-tracking"></div>
+    <div class="tab-pane" id="tab-wellness"></div>
+    <div class="tab-pane" id="tab-ai"></div>
+  </div>
+</div>
+
+<!-- Timer Overlay -->
+<div class="timer-overlay" id="timerOverlay">
+  <div class="timer-box">
+    <div class="timer-ex" id="timerEx">Rest</div>
+    <div class="timer-display" id="timerDisplay">01:30</div>
+    <div class="timer-label">Rest Timer</div>
+    <div class="timer-progress"><div class="timer-prog-fill" id="timerProgFill" style="width:100%"></div></div>
+    <div class="timer-btns" style="margin-top:20px;">
+      <button class="timer-btn" onclick="app.resetTimer()">Reset</button>
+      <button class="timer-btn primary" id="timerToggleBtn" onclick="app.toggleTimer()">Pause</button>
+      <button class="timer-btn" onclick="app.closeTimer()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Guided Workout Overlay -->
+<div class="guided-overlay" id="guidedOverlay">
+  <button class="guided-close" onclick="app.closeGuided()">X Exit</button>
+  <div class="guided-inner">
+    <div class="guided-progress-bar"><div class="guided-prog-fill" id="guidedProgFill"></div></div>
+    <div class="guided-step" id="guidedStep">Exercise 1/8</div>
+    <div class="guided-name" id="guidedName">--</div>
+    <div class="guided-muscle" id="guidedMuscle">--</div>
+    <div class="guided-desc" id="guidedDesc">--</div>
+    <div class="guided-meta">
+      <div class="guided-chip"><span>Sets</span><strong id="guidedSets">--</strong></div>
+      <div class="guided-chip"><span>Reps</span><strong id="guidedReps">--</strong></div>
+      <div class="guided-chip"><span>Rest</span><strong id="guidedRest">--</strong></div>
+    </div>
+    <div class="guided-actions">
+      <button class="guided-btn secondary" id="guidedPrevBtn" onclick="app.guidedNav(-1)">Prev</button>
+      <button class="guided-btn primary" onclick="app.startRestFromGuided()">Start Timer</button>
+      <button class="guided-btn primary" id="guidedNextBtn" onclick="app.guidedNav(1)">Next</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="data/exercises.js"></script>
+<script src="data/foods.js"></script>
+<script src="data/routines.js"></script>
+<script src="frontend/js/utils.js"></script>
+<script src="frontend/js/data.js"></script>
+<script src="frontend/js/ui.js"></script>
+<script src="frontend/js/app.js"></script>
+</body>
+</html>
