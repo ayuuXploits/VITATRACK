@@ -46,32 +46,29 @@ Smart nutrition & personalized fitness tracker — a full-stack web application 
 
 ```
 vitatrack/
-├── artifacts/
-│   ├── vitatrack/               # Frontend (React + Vite)
-│   │   ├── src/
-│   │   │   ├── data/            # Static data: food DB, exercise DB, routines
-│   │   │   ├── hooks/           # useVitaTrack — centralized state management
-│   │   │   ├── components/      # UI components by feature
-│   │   │   │   └── vitatrack/   # VitaTrack-specific components
-│   │   │   │       └── tabs/    # Tab content components
-│   │   │   ├── pages/           # Route-level pages
-│   │   │   └── styles/          # Feature CSS (vitatrack.css)
-│   │   └── vite.config.ts
-│   └── api-server/              # Backend (Express)
-│       └── src/
-│           ├── routes/
-│           │   ├── health.ts    # GET /api/healthz
-│           │   └── vitatrack.ts # POST /api/vitatrack/ai-coach
-│           └── app.ts
-├── lib/
-│   ├── api-spec/                # OpenAPI 3.1 source of truth
-│   ├── api-client-react/        # Generated React Query hooks
-│   ├── api-zod/                 # Generated Zod validation schemas
-│   ├── db/                      # Drizzle ORM schema + client
-│   └── integrations-anthropic-ai/ # Replit AI Integration client
-├── docs/                        # Architecture docs and assets
-├── scripts/                     # Utility scripts
-└── pnpm-workspace.yaml
+├── index.html              # Main HTML file
+├── frontend/
+│   ├── css/style.css       # All styles
+│   ├── js/
+│   │   ├── app.js          # Main application logic
+│   │   ├── data.js         # Data management
+│   │   ├── ui.js           # UI rendering functions
+│   │   └── utils.js        # Utility functions
+├── backend/
+│   ├── server.js           # Express server
+│   ├── routes/             # API routes
+│   ├── controllers/        # Route handlers
+│   └── middleware/         # Middleware
+├── data/
+│   ├── exercises.js        # Exercise database
+│   ├── foods.js            # Food database
+│   └── routines.js         # Workout routines
+└── docs/
+    ├── vitatrack.png
+    ├── vitatrack1.png
+    ├── vitatrack2.png
+    ├── vitatrack3.png
+    └── vitatrack4.png
 ```
 
 ## Installation & Setup
