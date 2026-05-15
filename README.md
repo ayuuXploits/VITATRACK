@@ -88,33 +88,25 @@ cd vitatrack
 ### 2. Install dependencies
 
 ```bash
-pnpm install
+cd backend
+npm install
 ```
 
 ### 3. Set up environment variables
 
-Copy the example env file and fill in your values:
-
 ```bash
 cp .env.example .env
+## Edit .env with your API keys
 ```
 
-Required variables:
 
-| Variable | Description |
-|---|---|
-| `DATABASE_URL` | PostgreSQL connection string |
-| `AI_INTEGRATIONS_ANTHROPIC_BASE_URL` | Anthropic API proxy URL (auto-set on Replit) |
-| `AI_INTEGRATIONS_ANTHROPIC_API_KEY` | Anthropic API key (auto-set on Replit) |
-| `SESSION_SECRET` | Secret for session signing |
-
-### 4. Set up the database
+### 4. Start the backend server
 
 ```bash
-pnpm --filter @workspace/db run push
+npm start
 ```
 
-### 5. Run in development
+### 5.Open index.html in your browser or serve with a local server
 
 Start the API server:
 
@@ -163,7 +155,21 @@ POST /api/vitatrack/ai-coach
   "text": "Here are 3 great meal ideas..."
 }
 ```
+### API Endpoints
 
+POST /api/calculate - Calculate BMR, TDEE, and macros
+POST /api/ai/coach - AI coaching requests
+POST /api/log/food - Log food entry
+POST /api/log/weight - Log weight entry
+POST /api/log/sleep - Log sleep entry
+
+### Environment Variables
+```
+env
+PORT=3000
+CLAUDE_API_KEY=your_claude_api_key
+NODE_ENV=development
+```
 ## Development Notes
 
 - **Never call `pnpm dev` at the workspace root** — each artifact has its own dev script
