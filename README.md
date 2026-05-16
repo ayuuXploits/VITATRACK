@@ -165,6 +165,7 @@ POST /api/log/weight - Log weight entry
 POST /api/log/sleep - Log sleep entry
 
 ### Environment Variables
+
 ```
 env
 PORT=3000
