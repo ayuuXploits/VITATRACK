@@ -262,7 +262,7 @@ POST /api/log/sleep     # Log a sleep entry
 
 ## 📄 License
 
-**Copyright © 2026 Ayush Kumar (ayuuXploits). All rights reserved.**
+**Copyright © 2026 ayuuXploits. All rights reserved.**
 
 This software and its associated documentation are proprietary to Ayush Kumar. No part of this software may be copied, modified, merged, published, distributed, sublicensed, or sold without the express written permission of the owner.
 
@@ -270,6 +270,6 @@ This software and its associated documentation are proprietary to Ayush Kumar. N
 
 <div align="center">
 
-Built with ❤️ by [Ayush Kumar](https://github.com/ayuuXploits)
+Built with ❤️ by [ayuuXploits](https://github.com/ayuuXploits)
 
 </div>
