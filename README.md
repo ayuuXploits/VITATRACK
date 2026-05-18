@@ -1,82 +1,128 @@
-# VitaTrack 
-![Main Header](./docs/vitatrack.png)
-| | |
-|---|---|
-| ![Dashboard](./docs/vitatrack1.png) | ![Targets](./docs/vitatrack2.png) |
-| ![Activity](./docs/vitatrack3.png) | ![Workouts](./docs/vitatrack4.png) |
 
-Smart nutrition & personalized fitness tracker — a full-stack web application for managing your health goals.
+<div align="center">
 
-## Features 
+<img src="./docs/vitatrack.png" alt="VitaTrack" width="120" />
 
-- **Personalized Calorie & Macro Targets** — calculated from your age, weight, height, and activity level using the Mifflin-St Jeor formula
-- **6 Fitness Goals** — Lose Weight, Gain Weight, Stay Healthy — with gym, home, and no-workout plans
-- **Weekly Workout Routines** — 7-day plans tailored to your goal and workout environment (gym or home)
-- **Guided Workout Mode** — step-through exercise coach with integrated rest timer
-- **Exercise Library** — 40+ exercises across chest, back, legs, shoulders, arms, and core
-- **Smart Calorie Log** — searchable food database with 50+ Indian & international foods
-- **Meal Templates** — save and reload your favourite meals in one click
-- **Body Measurement Tracker** — log chest, waist, hips, and arms over time
-- **Weight Trend Chart** — visualize progress with a 7-day moving average
-- **Sleep Tracker** — log bedtime and wake time, see weekly averages
-- **Mood & Energy Log** — track your wellbeing alongside your fitness data
+# VitaTrack
+
+**Smart Nutrition & Personalized Fitness Tracker**
+
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg?style=for-the-badge)](./LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-24+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Drizzle_ORM-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org)
+[![Powered by Claude](https://img.shields.io/badge/AI-Claude_by_Anthropic-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://anthropic.com)
+
+[![pnpm](https://img.shields.io/badge/pnpm-Workspaces-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io)
+[![Vite](https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Express](https://img.shields.io/badge/Express-5-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)
+[![OpenAPI](https://img.shields.io/badge/OpenAPI-3.1-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white)](https://www.openapis.org)
+
+<br/>
+
+*A full-stack health platform that calculates your personalized calorie & macro targets, plans your weekly workouts, and coaches you with AI — all in one place.*
+
+<br/>
+
+<img src="./docs/vitatrack1.png" width="48%" /> &nbsp; <img src="./docs/vitatrack2.png" width="48%" />
+<img src="./docs/vitatrack3.png" width="48%" /> &nbsp; <img src="./docs/vitatrack4.png" width="48%" />
+
+</div>
+
+---
+
+## ✨ Features
+
+### 🧮 Personalized Targets
+- Calorie & macro goals calculated from age, weight, height, and activity level via the **Mifflin-St Jeor** formula
+- Override targets with custom, doctor-prescribed values
+- 6 fitness goal modes: **Lose Weight**, **Gain Weight**, **Stay Healthy** — each with gym, home, and no-workout variants
+
+### 🏋️ Workouts
+- **7-day weekly routines** tailored to your goal and environment
+- **Guided Workout Mode** — step-through exercise coach with a built-in rest timer
+- **40+ exercise library** spanning chest, back, legs, shoulders, arms, and core
+
+### 🥗 Nutrition
+- **Smart Calorie Log** with a searchable database of 50+ Indian & international foods
+- **Meal Templates** — save and reload favourite meals in one click
+- Export food logs as **CSV** or **PDF**
+
+### 📊 Progress Tracking
+- **Weight Trend Chart** with 7-day moving average
+- **Body Measurement Tracker** — chest, waist, hips, and arms over time
+- **Sleep Tracker** — log bedtime & wake time with weekly averages
+- **Mood & Energy Log** — track wellbeing alongside fitness data
 - **Hydration Tracker** — glass-by-glass water logging with a daily goal
-- **Streak & Badges** — 49-day activity heatmap and 7 achievement badges
-- **Daily Challenges** — 3 randomized daily health challenges
-- **AI Health Coach** — powered by Claude (Anthropic) via Replit AI Integrations; provides meal suggestions, workout tips, weekly summaries, and motivation
-- **Export** — download food and weight logs as CSV, print as PDF
-- **Custom Targets** — override calorie/macro goals with doctor-prescribed values
 
-## Tech Stack
+### 🏆 Engagement
+- **49-day Activity Heatmap** and **7 achievement badges**
+- **3 randomized daily challenges** to keep you on your toes
+- Streak tracking to build long-term habits
+
+### 🤖 AI Health Coach
+Powered by **Claude (Anthropic)** via Replit AI Integrations. Provides:
+- Personalized meal suggestions
+- Workout tips and form guidance
+- Weekly progress summaries
+- Motivational nudges
+
+---
+
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Frontend | React 19, Vite 6, TypeScript 5.9 |
-| Styling | Custom CSS (dark theme) + Tailwind CSS v4 |
-| Charts | Recharts + Chart.js |
-| Backend | Node.js 24, Express 5 |
-| AI | Anthropic Claude (via Replit AI Integrations) |
-| Validation   | Zod v4, Drizzle-Zod |
-| API Contract  | OpenAPI 3.1 + Orval codegen |
-| Database | PostgreSQL + Drizzle ORM |
-| Package Manager | pnpm workspaces |
-| Build | esbuild (server), Vite (client) |
+| **Frontend** | React 19, Vite 6, TypeScript 5.9 |
+| **Styling** | Custom CSS (dark theme) + Tailwind CSS v4 |
+| **Charts** | Recharts + Chart.js |
+| **Backend** | Node.js 24, Express 5 |
+| **AI** | Anthropic Claude (via Replit AI Integrations) |
+| **Validation** | Zod v4, Drizzle-Zod |
+| **API Contract** | OpenAPI 3.1 + Orval codegen |
+| **Database** | PostgreSQL + Drizzle ORM |
+| **Package Manager** | pnpm workspaces |
+| **Build** | esbuild (server), Vite (client) |
+| **Logging** | pino (structured JSON) |
 
-## Project Structure
+---
+
+## 🗂️ Project Structure
 
 ```
 vitatrack/
-├── index.html              # Main HTML file
+├── index.html                  # Main HTML entry point
 ├── frontend/
-│   ├── css/style.css       # All styles
-│   ├── js/
-│   │   ├── app.js          # Main application logic
-│   │   ├── data.js         # Data management
-│   │   ├── ui.js           # UI rendering functions
-│   │   └── utils.js        # Utility functions
+│   ├── css/style.css           # All styles (dark theme)
+│   └── js/
+│       ├── app.js              # Main application logic
+│       ├── data.js             # Data management
+│       ├── ui.js               # UI rendering functions
+│       └── utils.js            # Utility functions
 ├── backend/
-│   ├── server.js           # Express server
-│   ├── routes/             # API routes
-│   ├── controllers/        # Route handlers
-│   └── middleware/         # Middleware
+│   ├── server.js               # Express server
+│   ├── routes/                 # API route definitions
+│   ├── controllers/            # Route handlers
+│   └── middleware/             # Auth, logging, error handling
 ├── data/
-│   ├── exercises.js        # Exercise database
-│   ├── foods.js            # Food database
-│   └── routines.js         # Workout routines
+│   ├── exercises.js            # Exercise database (40+ entries)
+│   ├── foods.js                # Food database (50+ entries)
+│   └── routines.js             # Weekly workout routines
 └── docs/
-    ├── vitatrack.png
-    ├── vitatrack1.png
-    ├── vitatrack2.png
-    ├── vitatrack3.png
-    └── vitatrack4.png
+    └── *.png                   # Screenshots & assets
 ```
 
-## Installation & Setup
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 24+
-- pnpm 9+
+| Tool | Version |
+|---|---|
+| Node.js | `>=24.0.0` |
+| pnpm | `>=9.0.0` |
 
 ### 1. Clone the repository
 
@@ -92,101 +138,138 @@ cd backend
 npm install
 ```
 
-### 3. Set up environment variables
+### 3. Configure environment variables
 
 ```bash
 cp .env.example .env
-## Edit .env with your API keys
+# Edit .env and fill in your values (see below)
 ```
 
+### 4. Start development servers
 
-### 4. Start the backend server
-
-```bash
-npm start
-```
-
-### 5.Open index.html in your browser or serve with a local server
-
-Start the API server:
+> ⚠️ **Never run `pnpm dev` at the workspace root.** Each package has its own dev script.
 
 ```bash
+# Start the API server
 pnpm --filter @workspace/api-server run dev
-```
 
-Start the frontend:
-
-```bash
+# In a separate terminal, start the frontend
 pnpm --filter @workspace/vitatrack run dev
 ```
 
-### 6. Regenerate API types (after spec changes)
+### 5. Build for production
+
+```bash
+pnpm run build
+```
+
+### 6. Regenerate API types (after OpenAPI spec changes)
 
 ```bash
 pnpm --filter @workspace/api-spec run codegen
 ```
 
-### 7. Build for production
+> Run `pnpm run typecheck` for a full type check across all packages.
 
-```bash
-pnpm run build
+---
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the `backend/` directory:
+
+```env
+PORT=3000
+CLAUDE_API_KEY=your_claude_api_key_here
+NODE_ENV=development
 ```
 
-## API Endpoints
+---
 
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/api/healthz` | Health check |
-| `POST` | `/api/vitatrack/ai-coach` | AI health coach (Claude) |
+## 📡 API Reference
 
-### AI Coach Request
+### Health Check
+
+```http
+GET /api/healthz
+```
+
+Returns `200 OK` when the server is healthy.
+
+---
+
+### Calculate BMR, TDEE & Macros
+
+```http
+POST /api/calculate
+```
+
+**Body**
 
 ```json
+{
+  "age": 25,
+  "weight": 75,
+  "height": 175,
+  "gender": "male",
+  "activityLevel": "moderate",
+  "goal": "lose_weight"
+}
+```
+
+---
+
+### AI Health Coach
+
+```http
 POST /api/vitatrack/ai-coach
+```
+
+**Request**
+
+```json
 {
   "prompt": "Suggest 3 meal ideas for 400 remaining calories"
 }
 ```
 
-### AI Coach Response
+**Response**
 
 ```json
 {
   "text": "Here are 3 great meal ideas..."
 }
 ```
-### API Endpoints
 
-POST /api/calculate - Calculate BMR, TDEE, and macros
-POST /api/ai/coach - AI coaching requests
-POST /api/log/food - Log food entry
-POST /api/log/weight - Log weight entry
-POST /api/log/sleep - Log sleep entry
+---
 
-### Environment Variables
+### Food & Progress Logging
 
+```http
+POST /api/log/food      # Log a food entry
+POST /api/log/weight    # Log a weight entry
+POST /api/log/sleep     # Log a sleep entry
 ```
-env
-PORT=3000
-CLAUDE_API_KEY=your_claude_api_key
-NODE_ENV=development
-```
-## Development Notes
 
-- **Never call `pnpm dev` at the workspace root** — each artifact has its own dev script
-- **Run codegen after every spec change** — `pnpm --filter @workspace/api-spec run codegen`
-- **Use `pnpm run typecheck`** for a full type check across all packages
-- The API server uses structured JSON logging via `pino` — use `req.log` inside route handlers
+---
 
-## License
+## 🧑‍💻 Development Notes
 
-Copyright (c) 2026 Ayush Kumar (ayuuXploits). All rights reserved.
+- **Structured logging**: Use `req.log` inside route handlers — the server uses `pino` for JSON-formatted logs.
+- **Type safety**: API types are generated via Orval from the OpenAPI 3.1 spec. Always run codegen after spec changes.
+- **Monorepo**: The project uses `pnpm workspaces`. Each package (`api-server`, `vitatrack`, `api-spec`) is independent.
 
-This software and associated documentation files (the "Software") are 
-proprietary to Ayush Kumar. 
+---
 
-No part of this Software may be copied, modified, merged, published, 
-distributed, sublicensed, or sold without the express written permission 
-of the owner.
+## 📄 License
 
+**Copyright © 2026 Ayush Kumar (ayuuXploits). All rights reserved.**
+
+This software and its associated documentation are proprietary to Ayush Kumar. No part of this software may be copied, modified, merged, published, distributed, sublicensed, or sold without the express written permission of the owner.
+
+---
+
+<div align="center">
+
+Built with ❤️ by [Ayush Kumar](https://github.com/ayuuXploits)
+
+</div>
