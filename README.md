@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="./docs/vitatrack.png" alt="VitaTrack" width="120" />
+<img src="./docs/vitatrack.png" alt="VitaTrack" width="150" />
 
 # VitaTrack
 
