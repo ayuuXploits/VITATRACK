@@ -169,6 +169,7 @@ pnpm run build
 
 ```bash
 pnpm --filter @workspace/api-spec run codegen
+
 ```
 
 > Run `pnpm run typecheck` for a full type check across all packages.
