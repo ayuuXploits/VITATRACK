@@ -74,7 +74,7 @@ Powered by **Claude (Anthropic)** via Replit AI Integrations. Provides:
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
-|---|---|
+|-----------|--------------|
 | **Frontend** | React 19, Vite 6, TypeScript 5.9 |
 | **Styling** | Custom CSS (dark theme) + Tailwind CSS v4 |
 | **Charts** | Recharts + Chart.js |
@@ -84,7 +84,7 @@ Powered by **Claude (Anthropic)** via Replit AI Integrations. Provides:
 | **API Contract** | OpenAPI 3.1 + Orval codegen |
 | **Database** | PostgreSQL + Drizzle ORM |
 | **Package Manager** | pnpm workspaces |
-| **Build** | esbuild (server), Vite (client) |
+| **Build**   | esbuild (server), Vite (client) |
 | **Logging** | pino (structured JSON) |
 
 ---
