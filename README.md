@@ -92,6 +92,7 @@ Powered by **Claude (Anthropic)** via Replit AI Integrations. Provides:
 ## 🗂️ Project Structure
 
 ```
+
 vitatrack/
 ├── index.html                  # Main HTML entry point
 ├── frontend/
