@@ -103,6 +103,7 @@ Powered by **Claude (Anthropic)** via Replit AI Integrations. Provides:
 
 ## 🗂️ Project Structure
 
+
 ```
 
 vitatrack/
