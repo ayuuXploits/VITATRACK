@@ -145,6 +145,7 @@ vitatrack/
 ```bash
 git clone https://github.com/ayuuXploits/VITATRACK.git
 cd vitatrack
+
 ```
 
 ### 2. Install dependencies
@@ -177,6 +178,7 @@ pnpm --filter @workspace/vitatrack run dev
 
 ```bash
 pnpm run build
+
 ```
 
 ### 6. Regenerate API types (after OpenAPI spec changes)
