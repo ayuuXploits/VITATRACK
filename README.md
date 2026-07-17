@@ -212,6 +212,7 @@ NODE_ENV=development
 
 ```http
 GET /api/healthz
+
 ```
 
 Returns `200 OK` when the server is healthy.
