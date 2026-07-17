@@ -260,6 +260,7 @@ POST /api/vitatrack/ai-coach
 {
   "text": "Here are 3 great meal ideas..."
 }
+
 ```
 
 ---
