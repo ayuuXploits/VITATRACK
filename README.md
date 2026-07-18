@@ -174,6 +174,7 @@ pnpm --filter @workspace/api-server run dev
 
 # In a separate terminal, start the frontend
 pnpm --filter @workspace/vitatrack run dev
+
 ```
 
 ### 5. Build for production
