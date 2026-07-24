@@ -249,6 +249,7 @@ POST /api/calculate
 ```http
 POST /api/vitatrack/ai-coach
 
+
 ```
 
 **Request**
