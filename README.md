@@ -205,6 +205,7 @@ Create a `.env` file in the `backend/` directory:
 PORT=3000
 CLAUDE_API_KEY=your_claude_api_key_here
 NODE_ENV=development
+
 ```
 
 ---
