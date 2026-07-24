@@ -257,6 +257,7 @@ POST /api/vitatrack/ai-coach
 {
   "prompt": "Suggest 3 meal ideas for 400 remaining calories"
 }
+
 ```
 
 **Response**
