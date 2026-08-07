@@ -127,6 +127,7 @@ vitatrack/
 └── docs/
     └── *.png                   # Screenshots & assets
 
+
 ```
 
 ---
