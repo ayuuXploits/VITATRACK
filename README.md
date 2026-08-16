@@ -155,6 +155,7 @@ cd backend
 npm install
 
 
+
 ```
 
 ### 3. Configure environment variables
