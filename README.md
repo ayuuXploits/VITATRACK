@@ -285,6 +285,7 @@ POST /api/vitatrack/ai-coach
 POST /api/log/food      # Log a food entry
 POST /api/log/weight    # Log a weight entry
 POST /api/log/sleep     # Log a sleep entry
+
 ```
 
 ---
