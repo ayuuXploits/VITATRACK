@@ -124,8 +124,6 @@ vitatrack/
 │   └── routines.js             # Weekly workout routines
 └── docs/
     └── *.png                   # Screenshots & assets
-
-
 ```
 
 ---
